@@ -1,15 +1,16 @@
-const mysql = require('mysql2');
+// src/config/database.js
+require("dotenv").config();
+const mysql = require("mysql2/promise");
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'your_password',
-    database: 'your_database'
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || "127.0.0.1",
+  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT, 10) : 3306,
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "intelligent_community",
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
-connection.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to the database!');
-});
-
-module.exports = connection;
+module.exports = pool;
