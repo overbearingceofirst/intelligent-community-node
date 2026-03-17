@@ -56,6 +56,63 @@ npm install
 node server.js
 ```
 
+## 数据库运行与初始化
+
+项目依赖 MySQL 数据库。可以按以下方式准备：
+
+1. **本机安装 MySQL**
+   - macOS（Homebrew）
+     ```bash
+     brew install mysql
+     brew services start mysql
+     ```
+   - Ubuntu/Debian
+     ```bash
+     sudo apt update
+     sudo apt install mysql-server
+     sudo systemctl start mysql
+     ```
+
+2. **创建数据库与用户**  
+   在 MySQL 客户端登录（root 无密码可直接，或 `sudo mysql`），执行：
+
+   ```sql
+   CREATE DATABASE IF NOT EXISTS intelligent_community
+     CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+   CREATE USER IF NOT EXISTS 'ic_user'@'localhost' IDENTIFIED BY '123456';
+   GRANT ALL PRIVILEGES ON intelligent_community.* TO 'ic_user'@'localhost';
+   FLUSH PRIVILEGES;
+   ```
+
+3. **导入表结构**  
+   切换到项目根目录，执行：
+
+   ```bash
+   cd /Users/danxiao/Documents/other/intelligent-community-node
+   mysql -h 127.0.0.1 -P 3306 -u ic_user -p intelligent_community < database/init.sql
+   ```
+
+   输入密码 `123456`（或你设定的密码）。
+
+4. **使用 Docker（可选）**
+   - 编辑 `.env.docker` 中的数据库配置。
+   - 运行：`docker-compose up --build -d`。
+   - 容器启动后，MySQL 会自动执行 `./database/init.sql`。
+   - 手动导入可以运行：`chmod +x scripts/init_db.sh && ./scripts/init_db.sh`。
+
+5. **验证数据库连接**
+
+   ```bash
+   mysql -h 127.0.0.1 -P 3306 -u ic_user -p -e "SHOW TABLES;"
+   ```
+
+6. **常见错误**
+   - `Access denied`：密码或 host 不匹配，请使用上述 SQL 重置用户。
+   - `Can't connect to server`：确保 MySQL 服务已启动且在 127.0.0.1:3306 监听。
+   - 初始化重复字段或语法错误，请检查 `database/init.sql` 是否已修改。
+
+完成后，再按照“快速启动”步骤安装依赖并跑起服务即可。
+
 ## 目录说明（建议）
 
 - server.js — 入口

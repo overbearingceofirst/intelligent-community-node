@@ -1,13 +1,14 @@
-const qrcode = require("qrcode");
 const pointsService = require("../services/pointsService");
+const qrcode = require("qrcode");
 const notificationService = require("../services/notificationService");
 const db = require("../config/db");
+const { success, error: respError } = require("../utils/response");
 
 async function getBalance(req, res, next) {
   try {
     const userId = req.user.id;
     const balance = await pointsService.getBalance(userId);
-    res.json({ points: balance });
+    return success(res, { points: balance });
   } catch (err) {
     next(err);
   }
@@ -18,7 +19,7 @@ async function listTransactions(req, res, next) {
     const userId = req.user.id;
     const limit = req.query.limit || 100;
     const rows = await pointsService.listTransactions(userId, limit);
-    res.json(rows);
+    return success(res, rows);
   } catch (err) {
     next(err);
   }
@@ -35,14 +36,12 @@ async function redeem(req, res, next) {
     const result = await pointsService.redeemReward(userId, reward_id);
     if (!result.ok) {
       if (result.error === "out_of_stock")
-        return res.status(400).json({ error: "out_of_stock" });
+        return respError(res, "out_of_stock", 400);
       if (result.error === "insufficient_points")
-        return res.status(400).json({ error: "insufficient_points" });
+        return respError(res, "insufficient_points", 400);
       if (result.error === "reward_not_found")
-        return res.status(404).json({ error: "reward_not_found" });
-      return res
-        .status(500)
-        .json({ error: result.error, detail: result.detail });
+        return respError(res, "reward_not_found", 404);
+      return respError(res, result.error, 500);
     }
 
     const token = result.token;
@@ -66,8 +65,7 @@ async function redeem(req, res, next) {
       console.error("notify user on redeem error", e);
     }
 
-    res.status(201).json({
-      ok: true,
+    return success(res, {
       redemption_id: result.redemption_id,
       qr: qrDataUrl,
       expires_at: result.expires_at,
@@ -159,7 +157,7 @@ async function verifyRedemption(req, res, next) {
 async function listRewards(req, res, next) {
   try {
     const rows = await pointsService.listRewards();
-    res.json(rows);
+    return success(res, rows);
   } catch (err) {
     next(err);
   }
@@ -211,10 +209,10 @@ module.exports = {
   getBalance,
   listTransactions,
   redeem,
-  verifyRedemption,
-  verifyRedemptionPublicPage,
   listRewards,
   createReward,
   updateReward,
   adminAdjust,
+  verifyRedemption,
+  verifyRedemptionPublicPage,
 };

@@ -2,6 +2,7 @@ const db = require("../config/db");
 const crypto = require("crypto");
 const qrcode = require("qrcode");
 const notificationService = require("../services/notificationService");
+const { success, error: respError } = require("../utils/response");
 
 // 创建访客预约（居民发起）
 async function createVisitor(req, res, next) {
@@ -70,7 +71,7 @@ async function createVisitor(req, res, next) {
       console.error("notify on createVisitor", e);
     }
 
-    res.status(201).json({
+    return success(res, {
       id: visitorId,
       qr: qrDataUrl,
       verify_url: verifyUrl,
@@ -120,7 +121,7 @@ async function listVisitors(req, res, next) {
     const dataParams = params.concat([limit, offset]);
     const [rows] = await db.query(sql, dataParams);
 
-    res.json({ page, limit, total, data: rows });
+    return success(res, { page, limit, total, data: rows });
   } catch (err) {
     next(err);
   }
@@ -143,7 +144,7 @@ async function getVisitor(req, res, next) {
       "SELECT vl.*, u.username, u.name FROM visitor_logs vl LEFT JOIN users u ON vl.user_id = u.id WHERE vl.visitor_id = ? ORDER BY vl.created_at ASC",
       [id],
     );
-    res.json({ ...visitor, logs });
+    return success(res, { ...visitor, logs });
   } catch (err) {
     next(err);
   }
@@ -179,7 +180,7 @@ async function approveVisitor(req, res, next) {
       console.error(e);
     }
 
-    res.json({ ok: true });
+    return success(res);
   } catch (err) {
     next(err);
   }
@@ -215,7 +216,7 @@ async function rejectVisitor(req, res, next) {
       console.error(e);
     }
 
-    res.json({ ok: true });
+    return success(res);
   } catch (err) {
     next(err);
   }

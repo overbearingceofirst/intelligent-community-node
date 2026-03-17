@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../config/db");
 const { verifyToken, requireRole } = require("../middleware/auth");
+const { success, error: respError } = require("../utils/response");
 
 // 获取当前用户资料
 router.get("/profile", verifyToken, async (req, res, next) => {
@@ -10,7 +11,7 @@ router.get("/profile", verifyToken, async (req, res, next) => {
       "SELECT id, username, name, role FROM users WHERE id = ?",
       [req.user.id],
     );
-    res.json(rows[0]);
+    return success(res, rows[0]);
   } catch (err) {
     next(err);
   }
@@ -38,7 +39,7 @@ router.get(
         "SELECT id, username, name, role, points FROM users ORDER BY created_at DESC LIMIT ? OFFSET ?",
         [limit, offset],
       );
-      res.json({ page, limit, total, data: rows });
+      return success(res, { page, limit, total, data: rows });
     } catch (err) {
       next(err);
     }
@@ -58,7 +59,7 @@ router.post(
         role,
         targetId,
       ]);
-      res.json({ ok: true });
+      return success(res);
     } catch (err) {
       next(err);
     }

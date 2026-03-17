@@ -1,5 +1,6 @@
 const db = require("../config/db");
 const notificationService = require("../services/notificationService");
+const { success, error: respError } = require("../utils/response");
 
 const ALLOWED_STATUSES = [
   "submitted",
@@ -28,7 +29,7 @@ async function createRepair(req, res, next) {
   try {
     const userId = req.user.id;
     const { house_id, title, description } = req.body;
-    if (!title) return res.status(400).json({ error: "title required" });
+    if (!title) return respError(res, "title required", 400);
 
     const [result] = await db.query(
       "INSERT INTO repairs (user_id, house_id, title, description, status) VALUES (?, ?, ?, ?, ?)",
@@ -40,7 +41,7 @@ async function createRepair(req, res, next) {
       "INSERT INTO repair_logs (repair_id, user_id, action, note) VALUES (?, ?, ?, ?)",
       [repairId, userId, "created", "用户提交报修"],
     );
-    res.status(201).json({ id: repairId });
+    return success(res, { id: repairId });
   } catch (err) {
     next(err);
   }
@@ -87,7 +88,7 @@ async function listRepairs(req, res, next) {
     const dataParams = params.concat([limit, offset]);
     const [rows] = await db.query(sql, dataParams);
 
-    res.json({ page, limit, total, data: rows });
+    return success(res, { page, limit, total, data: rows });
   } catch (err) {
     next(err);
   }
@@ -112,7 +113,7 @@ async function getRepair(req, res, next) {
       "SELECT rl.*, u.username, u.name FROM repair_logs rl LEFT JOIN users u ON rl.user_id = u.id WHERE rl.repair_id = ? ORDER BY rl.created_at ASC",
       [id],
     );
-    res.json({ ...repair, logs });
+    return success(res, { ...repair, logs });
   } catch (err) {
     next(err);
   }
@@ -168,7 +169,7 @@ async function updateRepair(req, res, next) {
           );
         }
       }
-      return res.json({ ok: true });
+      return success(res);
     }
 
     // 普通居民只能更新自己的请求，且仅在初始提交阶段允许修改标题/描述
@@ -201,7 +202,7 @@ async function updateRepair(req, res, next) {
       "INSERT INTO repair_logs (repair_id, user_id, action, note) VALUES (?, ?, ?, ?)",
       [id, userId, "updated", "用户修改报修内容"],
     );
-    res.json({ ok: true });
+    return success(res);
   } catch (err) {
     next(err);
   }
@@ -232,7 +233,7 @@ async function addLog(req, res, next) {
       "INSERT INTO repair_logs (repair_id, user_id, action, note) VALUES (?, ?, ?, ?)",
       [id, userId, action, note || null],
     );
-    res.json({ ok: true });
+    return success(res);
   } catch (err) {
     next(err);
   }
@@ -285,7 +286,7 @@ async function assignRepair(req, res, next) {
       console.error("notify owner on assign error", e);
     }
 
-    res.json({ ok: true });
+    return success(res);
   } catch (err) {
     next(err);
   }
@@ -354,7 +355,7 @@ async function changeStatus(req, res, next) {
       }
     }
 
-    res.json({ ok: true });
+    return success(res);
   } catch (err) {
     next(err);
   }

@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const sharp = require("sharp");
+const { success, error: respError } = require("../utils/response");
 
 function getBaseUrl(req) {
   return process.env.PUBLIC_BASE_URL || `${req.protocol}://${req.get("host")}`;
@@ -23,7 +24,7 @@ async function makeThumbnail(filePath) {
 
 async function uploadFile(req, res, next) {
   try {
-    if (!req.file) return res.status(400).json({ error: "no_file" });
+    if (!req.file) return respError(res, "no_file", 400);
     const filePath = req.file.path.replace(/\\/g, "/"); // windows friendly
 
     // 只对图片生成缩略图
@@ -47,8 +48,7 @@ async function uploadFile(req, res, next) {
         ? filePath.slice(uploadsIndex)
         : `/uploads/${path.basename(filePath)}`;
     const url = `${getBaseUrl(req)}${publicPath}`;
-    res.status(201).json({
-      ok: true,
+    return success(res, {
       url,
       thumb: thumbUrl,
       filename: req.file.filename,
@@ -61,8 +61,7 @@ async function uploadFile(req, res, next) {
 
 async function uploadMultiple(req, res, next) {
   try {
-    if (!req.files || !req.files.length)
-      return res.status(400).json({ error: "no_files" });
+    if (!req.files || !req.files.length) return respError(res, "no_files", 400);
     const base = getBaseUrl(req);
     const files = [];
     for (const f of req.files) {
@@ -94,7 +93,7 @@ async function uploadMultiple(req, res, next) {
         size: f.size,
       });
     }
-    res.status(201).json({ ok: true, files });
+    return success(res, { files });
   } catch (err) {
     next(err);
   }

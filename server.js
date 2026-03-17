@@ -58,12 +58,12 @@ app.use("/api/help", helpRoutes);
 // Basic health check
 app.get("/health", (req, res) => res.json({ ok: true }));
 
-// Global error handler
+// global error handler
 app.use((err, req, res, next) => {
   console.error(err);
   res
     .status(err.status || 500)
-    .json({ error: err.message || "Internal Server Error" });
+    .json({ code: err.status || 500, msg: err.message || "操作失败" });
 });
 
 // 启动通知队列 worker（异步处理通知）

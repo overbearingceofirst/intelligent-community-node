@@ -31,28 +31,4 @@ router.put(
 // 房屋绑定等其他接口
 router.post("/bind-house", verifyToken, ctrl.bindHouse);
 
-// 临时：在浏览器中访问表单以便测试（仅用于开发调试）
-router.get("/register", (req, res) => {
-  res.send(`
-    <h2>Register</h2>
-    <form method="POST" action="/api/auth/register">
-      <label>username: <input name="username" /></label><br/>
-      <label>password: <input name="password" type="password" /></label><br/>
-      <label>name: <input name="name" /></label><br/>
-      <button type="submit">Register</button>
-    </form>
-  `);
-});
-
-router.get("/login", (req, res) => {
-  res.send(`
-    <h2>Login</h2>
-    <form method="POST" action="/api/auth/login">
-      <label>username: <input name="username" /></label><br/>
-      <label>password: <input name="password" type="password" /></label><br/>
-      <button type="submit">Login</button>
-    </form>
-  `);
-});
-
 module.exports = router;
