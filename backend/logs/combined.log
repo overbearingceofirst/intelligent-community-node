@@ -1,0 +1,301 @@
+[2026-03-20 20:30:44] [ERROR] 启动失败 Unknown database 'intelligent_community' {"name":"SequelizeConnectionError","parent":{"code":"ER_BAD_DB_ERROR","errno":1049,"sqlState":"42000","sqlMessage":"Unknown database 'intelligent_community'"},"original":{"code":"ER_BAD_DB_ERROR","errno":1049,"sqlState":"42000","sqlMessage":"Unknown database 'intelligent_community'"},"stack":"SequelizeConnectionError: Unknown database 'intelligent_community'\n    at ConnectionManager.connect (/Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/dialects/mysql/connection-manager.js:126:17)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at ConnectionManager._connect (/Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)\n    at /Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32\n    at ConnectionManager.getConnection (/Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/dialects/abstract/connection-manager.js:280:7)\n    at /Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/sequelize.js:638:26\n    at MySQLQueryInterface.tableExists (/Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/dialects/abstract/query-interface.js:242:17)\n    at Function.sync (/Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/model.js:1349:21)\n    at Sequelize.sync (/Users/danxiao/Documents/other/intelligent-community-node/backend/node_modules/sequelize/src/sequelize.js:825:9)\n    at start (/Users/danxiao/Documents/other/intelligent-community-node/backend/src/app.ts:47:5)"}
+[2026-03-20 20:31:58] [INFO] 数据库同步完成 
+[2026-03-20 20:31:58] [INFO] 已创建管理员角色 
+[2026-03-20 20:31:58] [INFO] 已创建管理员账号：admin / admin123 
+[2026-03-20 20:31:58] [INFO] 后端服务运行在 http://localhost:3000 
+[2026-03-20 20:44:21] [INFO] 数据库同步完成 
+[2026-03-20 20:44:21] [INFO] 后端服务运行在 http://localhost:3000 
+[2026-03-20 21:17:17] [INFO] ✅ 数据库连接成功 
+[2026-03-20 21:17:17] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 21:17:17] [INFO] ✅ 已初始化系统菜单 
+[2026-03-20 21:17:17] [INFO] ✅ 已创建超级管理员角色 
+[2026-03-20 21:17:17] [INFO] ✅ 已创建普通角色 
+[2026-03-20 21:17:17] [INFO] ✅ 已创建管理员账号: admin / admin123 
+[2026-03-20 21:17:17] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 21:17:17] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 21:17:30] [INFO] 用户登录成功: admin 
+[2026-03-20 21:17:30] [INFO] POST /login 200 - 108ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 21:17:30] [INFO] GET /getInfo 200 - 15ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 21:43:51] [INFO] ✅ 数据库连接成功 
+[2026-03-20 21:43:51] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 21:43:51] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 21:43:51] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 21:45:27] [INFO] ✅ 数据库连接成功 
+[2026-03-20 21:45:29] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 21:45:29] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 21:45:29] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 21:45:42] [INFO] ✅ 数据库连接成功 
+[2026-03-20 21:45:43] [INFO] ✅ 数据库连接成功 
+[2026-03-20 21:45:44] [INFO] ✅ 数据库连接成功 
+[2026-03-20 21:45:44] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 21:45:44] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 21:45:44] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:11:24] [INFO] GET /getInfo 304 - 170ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:11:45] [INFO] GET /getInfo 304 - 19ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:12:51] [INFO] GET /getInfo 304 - 34ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:12:51] [INFO] GET /stats 200 - 74ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:01] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 24ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:02] [INFO] GET /list?pageNum=1&pageSize=100 200 - 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:03] [INFO] GET /list 200 - 10ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:03] [INFO] GET /operlog/list?pageNum=1&pageSize=10&title=&operName= 200 - 11ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:04] [INFO] GET /list?pageNum=1&pageSize=10&username=&phone= 200 - 15ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:05] [INFO] GET /list?pageNum=1&pageSize=10&title= 200 - 9ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:10] [INFO] GET /item/list?pageNum=1&pageSize=100 200 - 10ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:11] [INFO] GET /bill/list?pageNum=1&pageSize=10&billMonth= 200 - 10ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:12] [INFO] GET /list?pageNum=1&pageSize=10&title= 200 - 10ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:20] [INFO] POST / 200 - 33ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:13:20] [INFO] GET /list?pageNum=1&pageSize=10&title= 200 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:15:35] [INFO] POST / 200 - 104ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:15:35] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 8ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:15:46] [INFO] PUT /resetPwd 200 - 118ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:16:02] [INFO] 用户退出登录: admin 
+[2026-03-20 22:16:02] [INFO] POST /logout 200 - 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:16:18] [INFO] 用户登录成功: 测试物业管理员 
+[2026-03-20 22:16:18] [INFO] POST /login 200 - 104ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 22:16:18] [INFO] GET /getInfo 200 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:16:18] [INFO] GET /stats 304 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:16:21] [INFO] GET /item/list?pageNum=1&pageSize=100 304 - 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:16:22] [INFO] GET /bill/list?pageNum=1&pageSize=10&billMonth= 304 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:18:24] [INFO] GET /list?pageNum=1&pageSize=10&username=&phone= 304 - 96ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:18:26] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 3ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:26] [INFO] GET /list?pageNum=1&pageSize=10&title= 200 - 42ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:27] [INFO] GET /list?pageNum=1&pageSize=10&title= 200 - 8ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:29] [INFO] GET /list?pageNum=1&pageSize=10&visitorName= 200 - 13ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:31] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 200 - 9ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:33] [INFO] GET /community 200 - 9ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:36] [INFO] GET /building/list 200 - 7ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:20:57] [INFO] 用户退出登录: 测试物业管理员 
+[2026-03-20 22:20:57] [INFO] POST /logout 200 - 7ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"测试物业管理员"}
+[2026-03-20 22:21:04] [WARN] POST /login 400 - 112ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 22:21:18] [INFO] 用户登录成功: admin 
+[2026-03-20 22:21:18] [INFO] POST /login 200 - 99ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 22:21:18] [INFO] GET /getInfo 200 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:21:18] [INFO] GET /stats 304 - 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:21:25] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 11ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:21:30] [INFO] GET /list?pageNum=1&pageSize=100 304 - 85ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:21:32] [INFO] GET /list 304 - 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:21:35] [INFO] GET /operlog/list?pageNum=1&pageSize=10&title=&operName= 304 - 6ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:06] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 49ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:11] [INFO] GET /item/list?pageNum=1&pageSize=100 304 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:12] [INFO] GET /bill/list?pageNum=1&pageSize=10&billMonth= 304 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:18] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 7ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:23] [INFO] PUT /publish 200 - 12ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:23] [INFO] GET /list?pageNum=1&pageSize=10&title= 200 - 2ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:29] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 22ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:30] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 14ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:31] [INFO] GET /list?pageNum=1&pageSize=10&visitorName= 304 - 10ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:33] [INFO] GET /rule/list 200 - 7ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:37] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 304 - 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:40] [INFO] GET /community 200 - 5ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:43] [INFO] GET /building/list 304 - 4ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:48] [INFO] PUT /community 200 - 8ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:53] [INFO] GET /getInfo 304 - 6ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:22:53] [INFO] GET /community 200 - 8ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:23:43] [INFO] GET /list?pageNum=1&pageSize=10&userName= 304 - 12ms {"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:27:32] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:27:33] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:27:34] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:27:34] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:27:34] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:32:44] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:32:45] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:32:45] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:32:45] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:32:46] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:32:47] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:32:48] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:32:48] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:32:48] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:32:56] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:32:57] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:32:57] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:32:57] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:33:13] [INFO] 用户登录成功: admin 
+[2026-03-20 22:33:13] [INFO] POST /login 200 - 113ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 22:33:13] [INFO] GET /getInfo 200 - 13ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:14] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 12ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:14] [INFO] GET /community/options 200 - 7ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:24] [INFO] PUT / 200 - 24ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:24] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 15ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:27] [INFO] GET /community/list?pageNum=1&pageSize=10&name= 200 - 101ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:34] [INFO] POST /community 200 - 11ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:34] [INFO] GET /community/list?pageNum=1&pageSize=10&name= 200 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:52] [INFO] GET /getInfo 304 - 52ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:53] [INFO] GET /community/options 200 - 61ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:33:53] [INFO] GET /list?pageNum=1&pageSize=10&userName= 304 - 87ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:34:17] [INFO] POST / 200 - 153ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:34:17] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 9ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:34:39] [INFO] GET /building/list 304 - 25ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:36:53] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:36:54] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:36:54] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:36:54] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:36:56] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:36:58] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:36:58] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:36:58] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:37:07] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:37:09] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:37:09] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:37:09] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:37:19] [INFO] GET /list?pageNum=1&pageSize=10&userName= 304 - 33ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:37:19] [INFO] GET /community/options 304 - 66ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:37:35] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:37:36] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:37:36] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:37:36] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:38:02] [INFO] GET /getInfo 304 - 23ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:02] [INFO] GET /list?pageNum=1&pageSize=10&userName= 200 - 30ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:02] [INFO] GET /community/options 200 - 17ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:04] [INFO] GET /community/list?pageNum=1&pageSize=10&name= 304 - 15ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:05] [INFO] GET /community/options 304 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:05] [INFO] GET /building/list?communityId=1 200 - 24ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:26] [INFO] GET /building/list?communityId=2 200 - 27ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:30] [INFO] GET /building/list?communityId=1 304 - 2ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:38:31] [INFO] GET /building/list?communityId=2 304 - 2ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:40:58] [INFO] POST /building 200 - 22ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:40:58] [INFO] GET /building/list?communityId=2 200 - 9ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:41:09] [INFO] POST /building 200 - 11ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:41:09] [INFO] GET /building/list?communityId=2 200 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:41:40] [INFO] 用户退出登录: admin 
+[2026-03-20 22:41:40] [INFO] POST /logout 200 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"admin"}
+[2026-03-20 22:41:55] [INFO] 用户登录成功: xu 
+[2026-03-20 22:41:55] [INFO] POST /login 200 - 121ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 22:41:55] [INFO] GET /getInfo 200 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:41:55] [INFO] GET /stats 304 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:00] [INFO] GET /community 200 - 8ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:01] [INFO] GET /community/options 304 - 60ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:01] [INFO] GET /community 304 - 8ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:01] [INFO] GET /building/list?communityId=2 304 - 32ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:13] [INFO] POST /building 200 - 10ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:13] [INFO] GET /building/list?communityId=2 200 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:24] [INFO] PUT /building 200 - 8ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:42:24] [INFO] GET /building/list?communityId=2 200 - 7ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:43:29] [INFO] GET /list?pageNum=1&pageSize=10&username=&phone= 304 - 35ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:43:31] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:43:33] [INFO] GET /item/list?pageNum=1&pageSize=100 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:43:34] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 8ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:43:36] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:44:50] [INFO] 用户退出登录: xu 
+[2026-03-20 22:44:50] [INFO] POST /logout 200 - 12ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:45:00] [INFO] 用户登录成功: xu 
+[2026-03-20 22:45:00] [INFO] POST /login 200 - 208ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 22:45:00] [INFO] GET /getInfo 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:45:00] [INFO] GET /stats 304 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:45:03] [INFO] GET /list?pageNum=1&pageSize=10&username=&phone= 304 - 9ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:00] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 304 - 42ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:08] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 20ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:09] [INFO] GET /list?pageNum=1&pageSize=10&title= 304 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:10] [INFO] GET /list?pageNum=1&pageSize=10&visitorName= 304 - 7ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:13] [INFO] GET /item/list?pageNum=1&pageSize=100 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:13] [INFO] GET /bill/list?pageNum=1&pageSize=10&billMonth= 304 - 8ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:47:41] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:47:42] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:47:42] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:47:42] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:48:23] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:48:24] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:48:24] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:48:24] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:48:55] [INFO] GET /getInfo 304 - 59ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:48:56] [INFO] GET /bill/list?pageNum=1&pageSize=10&billMonth= 304 - 22ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:48:58] [INFO] GET /stats 304 - 20ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:50:15] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:50:16] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:50:16] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:50:16] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:50:17] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:50:18] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:50:18] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:50:18] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:50:50] [INFO] GET /getInfo 304 - 75ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:50:50] [INFO] GET /stats 200 - 82ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:50:50] [INFO] GET /pending-repairs 200 - 9ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:50:50] [INFO] GET /pending-residents 200 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:50:51] [INFO] GET /repair-trend 200 - 107ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:50:51] [INFO] GET /mutual-trend 200 - 105ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:51:10] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 304 - 27ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:56:01] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:56:02] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:56:02] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:56:02] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:56:24] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:56:26] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:56:26] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:56:26] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:57:02] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:57:03] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:57:03] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:57:03] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:57:08] [INFO] GET /getInfo 304 - 25ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:08] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 200 - 15ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:16] [INFO] GET /stats 304 - 35ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:16] [INFO] GET /pending-repairs 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:16] [INFO] GET /pending-residents 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:16] [INFO] GET /repair-trend 304 - 25ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:16] [INFO] GET /mutual-trend 304 - 48ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:18] [INFO] GET /community/options 304 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:18] [INFO] GET /community 304 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:18] [INFO] GET /exchange/list?pageNum=1&pageSize=10&name= 200 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:20] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 304 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:34] [INFO] POST /exchange 200 - 189ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:34] [INFO] GET /exchange/list?pageNum=1&pageSize=10&name= 200 - 35ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:38] [INFO] GET /community/options 304 - 7ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:38] [INFO] GET /community 304 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:57:38] [INFO] GET /exchange/list?pageNum=1&pageSize=10&name= 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:06] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:59:07] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:59:07] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:59:07] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:59:23] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:59:25] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:59:25] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:59:25] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:59:28] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:59:29] [INFO] ✅ 数据库连接成功 
+[2026-03-20 22:59:31] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 22:59:31] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 22:59:31] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 22:59:39] [INFO] GET /getInfo 304 - 95ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:39] [INFO] GET /community/options 200 - 13ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:39] [INFO] GET /community 200 - 15ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:39] [INFO] GET /exchange/list?pageNum=1&pageSize=10&name= 200 - 21ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:47] [INFO] GET /getInfo 304 - 21ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:47] [INFO] GET /community/options 304 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:47] [INFO] GET /community 304 - 8ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:47] [INFO] GET /exchange/list?pageNum=1&pageSize=10&name= 304 - 3ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:56] [INFO] GET /community/options 304 - 47ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:56] [INFO] GET /community 304 - 57ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 22:59:56] [INFO] GET /rule/list?communityId=2 200 - 9ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:01:29] [INFO] ✅ 数据库连接成功 
+[2026-03-20 23:01:30] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 23:01:30] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 23:01:30] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 23:01:34] [INFO] ✅ 数据库连接成功 
+[2026-03-20 23:01:36] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 23:01:36] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 23:01:36] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 23:01:41] [INFO] ✅ 数据库连接成功 
+[2026-03-20 23:01:42] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 23:01:42] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 23:01:42] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 23:01:54] [INFO] GET /getInfo 304 - 79ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:01:55] [INFO] GET /community/options 304 - 11ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:01:55] [INFO] GET /community 304 - 13ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:01:55] [INFO] GET /rule/list?communityId=2 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:03] [INFO] ✅ 数据库连接成功 
+[2026-03-20 23:02:04] [INFO] ✅ 数据库表同步完成 
+[2026-03-20 23:02:04] [INFO] 🚀 服务启动成功: http://localhost:3000 
+[2026-03-20 23:02:04] [INFO] 📚 健康检查: http://localhost:3000/health 
+[2026-03-20 23:02:32] [INFO] 用户登录成功: xu 
+[2026-03-20 23:02:32] [INFO] POST /login 200 - 111ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"}
+[2026-03-20 23:02:32] [INFO] GET /getInfo 200 - 11ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:32] [INFO] GET /community/options 304 - 22ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:32] [INFO] GET /community 304 - 12ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:32] [INFO] GET /rule/list?communityId=2 304 - 20ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:39] [INFO] GET /community/options 304 - 2ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:39] [INFO] GET /community 304 - 6ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:39] [INFO] GET /exchange/list?pageNum=1&pageSize=10&name= 304 - 5ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:40] [INFO] GET /flow/list?pageNum=1&pageSize=10&residentId= 304 - 4ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:49] [INFO] POST /rule 200 - 26ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}
+[2026-03-20 23:02:49] [INFO] GET /rule/list?communityId=2 200 - 14ms {"ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36","user":"xu"}

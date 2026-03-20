@@ -1,0 +1,40 @@
+/**
+ * 若依风格 - 全局样式变量
+ */
+
+// 主题色
+$primary-color: #409eff;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
+
+// 侧边栏
+$sidebar-bg: #001529;
+$sidebar-text: rgba(255, 255, 255, 0.65);
+$sidebar-active-text: #fff;
+$sidebar-width: 210px;
+
+// 顶部导航
+$header-height: 50px;
+$header-bg: #fff;
+
+// 文字颜色
+$text-primary: #303133;
+$text-regular: #606266;
+$text-secondary: #909399;
+
+// 边框
+$border-color: #dcdfe6;
+
+// 背景
+$bg-page: #f0f2f5;
+
+// 圆角
+$border-radius: 4px;
+
+// 阴影
+$box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+// 过渡
+$transition-duration: 0.3s;

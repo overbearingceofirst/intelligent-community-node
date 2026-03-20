@@ -1,136 +1,204 @@
-# intelligent-community-node
+# 社区智慧便民服务信息系统 - 后台管理系统
 
-Node.js backend for Intelligent Community (express + MySQL + JWT)
+基于 Node.js + Express + TypeScript + Vue3 + Element Plus 开发，严格复刻若依（RuoYi-Vue）样式。
 
-## 目标概述（按角色）
+## 技术栈
 
-- 普通居民（小程序）
-  - 实名认证、房屋绑定
-  - 缴费查询与小程序内提醒（不发送邮件）
-  - 报修提交与进度查看
-  - 政务导航、快递指引
-  - 发布/领取互助、发布闲置物品
-  - 访客预约二维码、积分查看与兑换、消息与隐私设置
+- **后端**：Node.js + Express + TypeScript + Sequelize + JWT + Winston
+- **前端**：Vue 3 + TypeScript + Vite + Element Plus + Pinia + Vue Router
+- **数据库**：MySQL 8.x
+- **兼容性**：Chrome 80+
 
-- 物业管理员（小程序 + 管理端）
-  - 居民信息审核、报修工单处理
-  - 访客出入管理与核验、发布缴费通知与公告
-  - 楼栋级精准推送、互助内容审核、积分核算、服务数据查看
+## 目录结构
 
-- 系统管理员（管理端）
-  - 账号管理、权限分配、社区信息配置
-  - 积分规则设置、数据维护、系统监控
+```
+root/
+├── backend/                 # 后端服务
+│   ├── src/
+│   │   ├── controllers/     # 控制器
+│   │   ├── models/          # Sequelize 模型
+│   │   ├── routes/          # 路由定义
+│   │   ├── middleware/      # 中间件
+│   │   ├── utils/           # 工具函数
+│   │   └── app.ts           # 入口文件
+│   ├── .env                 # 环境变量
+│   └── package.json
+├── frontend/                # 前端应用（若依风格）
+│   ├── src/
+│   │   ├── api/             # 接口封装
+│   │   ├── components/      # 通用组件
+│   │   ├── router/          # 路由配置
+│   │   ├── store/           # 状态管理
+│   │   ├── styles/          # 样式文件
+│   │   ├── views/           # 页面组件
+│   │   └── main.ts
+│   └── package.json
+└── README.md
+```
 
-## 当前实现（骨架）
+## 快速启动
 
-- Express + MySQL + JWT 骨架
-- 基础模型：users, houses, repairs, payments, visitors
-- 身份认证与角色中间件
-- 站内通知（notifications 表 + push stub），系统通过写通知记录实现小程序内提醒；邮件功能已禁用
-- 数据库初始化脚本（database/init.sql）
-
-## 接下来的开发建议（优先级）
-
-1. 完成用户注册/登录/实名认证流程（高）
-2. 房屋绑定及房屋与用户关系管理（高）
-3. 报修工单生命周期（提交→受理→处理→评价）（高）
-4. 支付与缴费通知（查询、账单、在小程序内提醒）（中）
-5. 访客预约二维码生成与校验（中）
-6. 积分系统基础与兑换接口（中）
-7. 管理端权限与多角色接口（高）
-8. RPC/消息推送（如楼栋精准推送）设计（低）
-
-## 快速启动（开发）
-
-1. 创建 .env（参考 .env.example）
-2. 安装依赖：
+### 1. 启动 MySQL 并创建数据库
 
 ```bash
+# 启动 MySQL
+brew services start mysql
+
+# 创建数据库和用户
+mysql -u root -p
+
+# 执行以下 SQL
+CREATE DATABASE IF NOT EXISTS intelligent_community CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE USER IF NOT EXISTS 'ic_user'@'localhost' IDENTIFIED BY '123456';
+CREATE USER IF NOT EXISTS 'ic_user'@'127.0.0.1' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON intelligent_community.* TO 'ic_user'@'localhost';
+GRANT ALL PRIVILEGES ON intelligent_community.* TO 'ic_user'@'127.0.0.1';
+FLUSH PRIVILEGES;
+```
+
+### 2. 启动后端
+
+```bash
+cd backend
 npm install
+npm run dev
+# 运行在 http://localhost:3000
 ```
 
-3. 初始化数据库（执行 database/init.sql）
-4. 启动服务：
+### 3. 启动前端
 
 ```bash
-node server.js
+cd frontend
+npm install
+npm run dev
+# 运行在 http://localhost:8080
 ```
 
-## 数据库运行与初始化
+### 4. 访问系统
 
-项目依赖 MySQL 数据库。可以按以下方式准备：
+- 前端地址：http://localhost:8080
+- **系统管理员**：`admin` / `123456`（全部权限）
+- **物业管理员**：`property` / `123456`（部分权限）
 
-1. **本机安装 MySQL**
-   - macOS（Homebrew）
-     ```bash
-     brew install mysql
-     brew services start mysql
-     ```
-   - Ubuntu/Debian
-     ```bash
-     sudo apt update
-     sudo apt install mysql-server
-     sudo systemctl start mysql
-     ```
+## 功能模块
 
-2. **创建数据库与用户**  
-   在 MySQL 客户端登录（root 无密码可直接，或 `sudo mysql`），执行：
+### 系统管理（仅系统管理员）
 
-   ```sql
-   CREATE DATABASE IF NOT EXISTS intelligent_community
-     CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-   CREATE USER IF NOT EXISTS 'ic_user'@'localhost' IDENTIFIED BY '123456';
-   GRANT ALL PRIVILEGES ON intelligent_community.* TO 'ic_user'@'localhost';
-   FLUSH PRIVILEGES;
-   ```
+- [x] 管理员账号管理（CRUD、冻结/解冻、重置密码）
+- [x] 角色管理（系统管理员/物业管理员）
+- [x] 菜单管理（树形菜单、排序）
+- [x] 操作日志（查看、筛选、删除）
 
-3. **导入表结构**  
-   切换到项目根目录，执行：
+### 居民管理
 
-   ```bash
-   cd /Users/danxiao/Documents/other/intelligent-community-node
-   mysql -h 127.0.0.1 -P 3306 -u ic_user -p intelligent_community < database/init.sql
-   ```
+- [x] 居民列表（多条件筛选、启用/禁用）
+- [x] 实名认证审核
+- [x] 房屋绑定审核
 
-   输入密码 `123456`（或你设定的密码）。
+### 报修管理
 
-4. **使用 Docker（可选）**
-   - 编辑 `.env.docker` 中的数据库配置。
-   - 运行：`docker-compose up --build -d`。
-   - 容器启动后，MySQL 会自动执行 `./database/init.sql`。
-   - 手动导入可以运行：`chmod +x scripts/init_db.sh && ./scripts/init_db.sh`。
+- [x] 报修工单列表（状态管理）
+- [x] 工单处理（派单、完成）
+- [x] 工单统计
 
-5. **验证数据库连接**
+### 缴费管理
 
-   ```bash
-   mysql -h 127.0.0.1 -P 3306 -u ic_user -p -e "SHOW TABLES;"
-   ```
+- [x] 缴费项目（物业费/水费/电费）
+- [x] 账单管理（录入、导入、提醒）
 
-6. **常见错误**
-   - `Access denied`：密码或 host 不匹配，请使用上述 SQL 重置用户。
-   - `Can't connect to server`：确保 MySQL 服务已启动且在 127.0.0.1:3306 监听。
-   - 初始化重复字段或语法错误，请检查 `database/init.sql` 是否已修改。
+### 通知公告
 
-完成后，再按照“快速启动”步骤安装依赖并跑起服务即可。
+- [x] 公告管理（CRUD、按楼栋推送）
+- [x] 定时发布、上下架
 
-## 目录说明（建议）
+### 邻里互助
 
-- server.js — 入口
-- src/config — 数据库与配置信息
-- src/routes — 路由定义
-- src/controllers — 业务逻辑
-- src/middleware — 认证/权限
-- database/init.sql — 数据表初始化脚本
+- [x] 互助需求审核
+- [x] 任务完成确认
+- [x] 积分发放
 
-## 常见问题
+### 闲置物品
 
-- 找不到 database/init.sql（zsh: no such file or directory）
-  - 请先切换到项目根目录再执行导入：
-    ```bash
-    cd /Users/danxiao/Documents/other/intelligent-community-node
-    mysql -u ic_user -p intelligent_community < database/init.sql
-    ```
-  - 或使用绝对路径：
-    ```bash
-    mysql -u ic_user -p intelligent_community < /Users/danxiao/Documents/other/intelligent-community-node/database/init.sql
-    ```
+- [x] 闲置信息审核
+- [x] 上下架管理
+
+### 访客管理
+
+- [x] 访客预约记录
+- [x] 核验记录查看
+
+### 积分管理
+
+- [x] 积分规则配置（仅系统管理员）
+- [x] 积分流水查看
+- [x] 兑换审核
+
+### 系统设置
+
+- [x] 小区信息配置（系统管理员可改，物业管理员只读）
+- [x] 楼栋管理
+
+## 权限设计
+
+| 角色       | 权限范围                                                     |
+| ---------- | ------------------------------------------------------------ |
+| 系统管理员 | 全部功能，包括新增/删除小区、管理员账号管理                  |
+| 物业管理员 | 需绑定小区，只能编辑自己绑定的小区信息，其他业务功能正常使用 |
+
+### 小区绑定说明
+
+- 物业管理员创建时需要选择绑定的小区
+- 物业管理员只能查看和编辑自己绑定的小区信息
+- 系统管理员可以管理所有小区（新增、编辑、删除）
+- 有用户绑定的小区无法删除
+
+## 常见问题排查
+
+### 1. 数据库连接失败
+
+```bash
+# 确认 MySQL 运行
+brew services list
+
+# 启动 MySQL
+brew services start mysql
+
+# 测试连接
+mysql -h 127.0.0.1 -P 3306 -u ic_user -p
+```
+
+### 2. 前端登录接口报错
+
+```bash
+# 确认后端运行
+curl http://localhost:3000/health
+
+# 测试登录
+curl -X POST http://localhost:3000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"admin","password":"123456"}'
+```
+
+### 3. 端口被占用
+
+```bash
+lsof -iTCP:3000 -sTCP:LISTEN
+lsof -iTCP:8080 -sTCP:LISTEN
+kill <pid>
+```
+
+## 开发命令
+
+```bash
+# 启动 MySQL
+brew services start mysql
+
+# 后端开发
+cd backend && npm run dev
+
+# 前端开发
+cd frontend && npm run dev
+
+# 健康检查
+curl http://localhost:3000/health
+```

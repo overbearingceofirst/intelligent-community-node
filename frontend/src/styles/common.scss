@@ -1,0 +1,112 @@
+/**
+ * 通用样式（若依风格）
+ */
+
+// 页面容器
+
+@use "./variables.scss" as *;
+.app-container {
+  padding: 20px;
+}
+
+// 搜索区域
+.search-form {
+  padding: 18px 20px 0;
+  background: $bg-card;
+  border-radius: $border-radius;
+  margin-bottom: 16px;
+
+  .el-form-item {
+    margin-bottom: 18px;
+  }
+}
+
+// 表格容器
+.table-container {
+  padding: 20px;
+  background: $bg-card;
+  border-radius: $border-radius;
+}
+
+// 表格工具栏
+.table-toolbar {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    display: flex;
+    gap: 10px;
+  }
+
+  .right {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+// 分页
+.pagination-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// 弹窗表单
+.dialog-form {
+  .el-form-item {
+    margin-bottom: 22px;
+  }
+
+  .el-select,
+  .el-input {
+    width: 100%;
+  }
+}
+
+// 状态标签
+.status-tag {
+  &.success {
+    color: $success-color;
+  }
+  &.danger {
+    color: $danger-color;
+  }
+}
+
+// 操作按钮组
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+// 面包屑
+.breadcrumb-container {
+  padding: 15px 20px;
+  background: $bg-card;
+
+  .el-breadcrumb__item {
+    .el-breadcrumb__inner {
+      color: $text-regular;
+
+      &.is-link:hover {
+        color: $primary-color;
+      }
+    }
+
+    &:last-child .el-breadcrumb__inner {
+      color: $text-secondary;
+    }
+  }
+}
+
+// 卡片标题
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: 16px;
+  padding-left: 10px;
+  border-left: 3px solid $primary-color;
+}
